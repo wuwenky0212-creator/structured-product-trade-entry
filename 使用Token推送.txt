@@ -1,0 +1,19 @@
+如果浏览器认证不成功，使用以下方法：
+
+1. 生成 Personal Access Token：
+   - 访问：https://github.com/settings/tokens
+   - 点击 "Generate new token" → "Generate new token (classic)"
+   - Note: Railway Deployment
+   - 勾选 ✅ repo 权限
+   - 生成并复制 token
+
+2. 在终端执行：
+   git push -u origin main
+
+3. 当提示输入时：
+   Username: wuwenky0212-creator
+   Password: 粘贴你的 token（不是密码！）
+
+4. 如果还是失败，可以尝试使用 cmd：
+   cmd /c git push -u origin main
+
