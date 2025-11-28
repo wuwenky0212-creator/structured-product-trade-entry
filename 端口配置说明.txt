@@ -1,0 +1,36 @@
+端口问题解决方案
+================
+
+问题：
+- Railway 配置的端口：3000
+- 应用实际监听的端口：8080
+- 应用监听在 localhost，外部无法访问
+
+解决方案有两种：
+
+方案 1：修改 Railway Networking 端口为 8080（推荐）
+--------------------------------------------------
+1. 在 Railway 中，点击 Settings > Networking
+2. 找到 "Public Networking" 部分
+3. 找到现有域名的配置
+4. 点击编辑图标（铅笔图标）
+5. 将 "Enter the port your app is listening on" 改为：8080
+6. 点击 "Update" 保存
+
+方案 2：使用 Railway 的 PORT 环境变量
+--------------------------------------------------
+Railway 会自动提供 PORT 环境变量，应用应该使用它。
+
+当前配置：
+- railway.json: "startCommand": "npx serve -s dist -l ${PORT}"
+- package.json: "start": "npx serve -s dist -l ${PORT:-3000}"
+
+问题可能是：
+1. Railway 分配的端口确实是 8080（不是 3000）
+2. 应用应该使用 PORT 环境变量，但可能没有正确读取
+
+建议：
+- 先在 Railway Networking 中将端口改为 8080
+- 这样端口就匹配了
+- 然后再看看应用是否能正常访问
+
