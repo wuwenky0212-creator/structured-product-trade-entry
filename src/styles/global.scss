@@ -1,0 +1,60 @@
+/**
+ * 全局样式
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  font-size: 14px;
+  color: $text-color-primary;
+  background-color: $bg-color;
+  line-height: 1.5;
+}
+
+// 必填字段标识
+.required-field {
+  &::before {
+    content: '*';
+    color: $danger-color;
+    margin-right: 4px;
+  }
+}
+
+// 禁用字段样式
+.disabled-field {
+  background-color: $bg-color-dark;
+  cursor: not-allowed;
+}
+
+// 表单容器
+.form-container {
+  background: $bg-color-light;
+  padding: $spacing-md;
+  border-radius: $border-radius-base;
+  margin-bottom: $spacing-sm;
+}
+
+// 表单标题
+.form-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: $text-color-primary;
+  margin-bottom: $spacing-sm;
+  padding-bottom: 6px;
+  border-bottom: 1px solid $border-color-light;
+
+  &::before {
+    content: '|';
+    color: $primary-color;
+    margin-right: $spacing-xs;
+  }
+}
+
+
