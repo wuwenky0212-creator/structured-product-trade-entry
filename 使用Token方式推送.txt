@@ -1,0 +1,46 @@
+浏览器认证失败，改用 Token 方式推送代码
+========================================
+
+步骤 1：生成 Personal Access Token
+-----------------------------------
+1. 打开浏览器，访问：
+   https://github.com/settings/tokens
+
+2. 点击 "Generate new token" 按钮
+   然后选择 "Generate new token (classic)"
+
+3. 填写 Token 信息：
+   - Note（备注）：输入 "Railway Deployment"（随便写个名字）
+   - Expiration（过期时间）：选择 "90 days" 或 "No expiration"
+   - Select scopes（选择权限）：勾选 ✅ "repo" 选项
+     （这会包含所有仓库权限，包括读取和写入）
+
+4. 点击页面底部的绿色 "Generate token" 按钮
+
+5. ⚠️ 重要：立即复制生成的 Token！
+   - Token 格式类似：ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   - 这个 Token 只显示一次，刷新页面就看不到了！
+   - 建议先复制到记事本保存一下
+
+步骤 2：使用 Token 推送代码
+-----------------------------------
+复制好 Token 后，告诉我，我会帮你执行推送命令。
+
+推送时会提示输入：
+- Username: wuwenky0212-creator
+- Password: 粘贴你的 Token（不是密码！）
+
+步骤 3：验证是否成功
+-----------------------------------
+推送成功后，访问：
+https://github.com/wuwenky0212-creator/structured-product-trade-entry
+
+如果能看到所有文件，说明成功了！
+
+========================================
+提示
+========================================
+- Token 就像是你的密码，要保管好，不要分享给别人
+- 如果不小心丢失了，可以删除旧的 Token，再生成一个新的
+- Token 可以随时在 GitHub Settings > Developer settings > Personal access tokens 中管理
+
